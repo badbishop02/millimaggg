@@ -7,13 +7,14 @@ import Footer from '../../components/Footer';
 import Menu from "../../components/Menu";
 
 import { client, urlFor } from "../../utils/client";
-import { useStateContext } from '../../context/StateContext';
+import { UStateContext } from '../../context/StateContext';
 
 
 export default function itemDetails ({ foods, food, socialsData }) {
   //destructure the food to get the details in it.
+  const useStateContext = UStateContext;
   const { image, title, detail, price, glovo, boltfood } = food;
-  const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
+  const { decQty, incQty, qty, onAdd, setShowCart } = UStateContext();
 
   return (
   <>

@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 import { useRouter } from 'next/router';
 import { FaCloudUploadAlt } from 'react-icons/fa';
-import { millimag } from "../img/banner/bradcam.jpeg";
+import millimag from "../img/banner/bradcam.jpeg";
 
 import Navbar from './Navbar';
 
@@ -37,7 +37,7 @@ const CheckoutPage = () => {
         location,
       };
 
-      await axios.post(`${Bprocess.env.NEXT_PUBLIC_BASE_URL}/api/post`, doc);
+      await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/api/post`, doc);
         
       router.push('/');
     }

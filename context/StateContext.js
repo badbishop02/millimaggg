@@ -100,4 +100,4 @@ export const StateContext = ({ children }) => {
   )
 }
 
-export const useStateContext = () => useContext(Context);
+export const UStateContext = () => useContext(Context);

@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true, 
 images: {
-  domains: ['cdn.sanity.io','lh3.googleusercontent.com','tecdn.b-cdn.net', 'https://flowbite.com/docs/images'],
+  domains: ['cdn.sanity.io', 'i.ibb.co','lh3.googleusercontent.com','tecdn.b-cdn.net', 'https://flowbite.com/docs/images'],
   },
 };
 

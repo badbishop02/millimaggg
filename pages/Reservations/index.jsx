@@ -6,7 +6,7 @@ import Navbar from '../../components/Navbar';
 
 import { useRouter } from 'next/router';
 import { FaCloudUploadAlt } from 'react-icons/fa';
-import { millimag } from "../../img/banner/bradcam.jpeg";
+import millimag from "../../img/banner/bradcam.jpeg";
 
 import axios from 'axios';
 import useAuthStore from "../../store/authStore";

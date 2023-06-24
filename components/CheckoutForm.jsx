@@ -3,12 +3,12 @@ import Image from 'next/image';
 import axios from 'axios';
 import { useRouter } from 'next/router';
 
-import { useStateContext } from '../context/StateContext';
+import { UStateContext } from '../context/StateContext';
 import { urlFor } from '../utils/client';
 import mpesa from "../img/banner/contact.jpg";
 
 const CheckoutForm = () => {
-    const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
+    const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = UStateContext();
 
     const [name, setName] = useState('');
     const [lastname, setLastname] = useState('');

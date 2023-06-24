@@ -4,14 +4,14 @@ import { AiOutlineMinus, AiOutlinePlus, AiOutlineLeft, AiOutlineShopping } from 
 import { TiDeleteOutline } from 'react-icons/ti';
 import toast from 'react-hot-toast';
 
-import { useStateContext } from '../context/StateContext';
+import { UStateContext } from '../context/StateContext';
 import { urlFor } from '../utils/client';
 import CheckoutForm from './CheckoutForm';
 
 const Cart = () => {
 
   const cartRef = useRef();
-  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
+  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = UStateContext();
 
   const [showModal, setShowModal] = useState(false);
 

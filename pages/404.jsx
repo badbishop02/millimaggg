@@ -10,7 +10,6 @@ const error = () => {
     <div className="bg-white">
       <Header />
       <ErrorComponent />
-      <Footer />
       {/* </Layout> */}
     </div>
     </>

@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import millimag from "../img/logo/mm.png";
 
 import Cart from "./Cart";
-import { useStateContext } from "../context/StateContext";
+import { UStateContext } from "../context/StateContext";
 
 import {
     MagnifyingGlassIcon,
@@ -17,7 +17,7 @@ import {
   } from "@heroicons/react/outline";
 
 const Navbar = () => {
-      const { showCart, setShowCart, totalQuantities } = useStateContext();
+      const { showCart, setShowCart, totalQuantities } = UStateContext();
       const [isOpen, setIsOpen] = useState(false);
       const user = false;
       const [searchValue, setSearchValue] = useState('');
