@@ -5,7 +5,7 @@ import { urlFor } from '../utils/client';
 
 const Aboutus = ({ aboutInfo }) => {
   return (
-    <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]">
+ <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]">
   <div className="container mx-auto">
     <div className="-mx-4 flex flex-wrap items-center justify-between">
       <div className="w-full px-4 lg:w-6/12">
@@ -624,11 +624,11 @@ const Aboutus = ({ aboutInfo }) => {
              {aboutInfo?.story2}
           </p>
           <Link href="/">
-          <p
-            className="bg-primary inline-flex items-center justify-center rounded-lg py-4 px-10 text-center text-base font-normal text-white hover:bg-opacity-90 lg:px-8 xl:px-10"
-          >
-           Buy Now
-          </p>
+          <button 
+        className="mt-8 px-12 py-3 bg-gradient-to-r from-orange-500 to-red-900 hover:from-amber-600 hover:to-red-700 text-xl text-white/70 font-semibold drop-shadow-lg rounded-full"
+      >
+        Buy Now.
+      </button>
           </Link>
         </div>
       </div>
