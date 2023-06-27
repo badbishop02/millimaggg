@@ -64,14 +64,17 @@ const Reservations = () => {
 
   return (
     <div className="relative bg-white pb-2 h-full justify-center items-center">
-        <div className="flex flex-col justify-center items-center">
-        <Image 
-          className="h-full w-full md:w-auto max-w-none object-cover" 
-          src={millimag}
-          alt="millimag"
-          width={1550}
-          height={450} 
-        />
+        <header className="w-full h-96 bg-[url('https://www.kindacode.com/wp-content/uploads/2022/06/hero-image-example.jpeg')] bg-cover bg-center flex justify-center items-center">
+    <div className="flex flex-col justify-center items-center">
+      <h1 className=" text-center text-5xl text-white font-bold drop-shadow-lg">
+        Make reservations 
+        <span className="text-orange-600"> with us.</span>
+      </h1>
+      <p className="mt-5 text-center text-lg text-white opacity-70">
+        Our Eatery location and services makes it convinient and ideal choice for event reservations.
+      </p>
+    </div>
+  </header>
            
            <div className="absolute top-0 z-1 w-full items-center">
            <Navbar />
@@ -91,13 +94,13 @@ const Reservations = () => {
                 Table Reservation.
                </h6>
           <button 
-          className="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" 
+          className="bg-orange-600 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" 
           onClick={handlePost} 
           >
             Reserve
             </button>
             <button 
-          className="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" 
+          className="bg-orange-600 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" 
           type="submit" 
           onClick={handleDiscard}
           >
@@ -118,7 +121,8 @@ const Reservations = () => {
               </label>
               <input 
               type="number" 
-              id="phone" 
+              placeholder=" 0700 123 456"
+              required
               name="phone" 
               className="border-0 px-3 py-3 placeholder-blueGray-300 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" 
               value={phone} 
@@ -283,7 +287,6 @@ const Reservations = () => {
   </div>
  </section>
 </div>     
-</div>
 </div>
   )
 }
