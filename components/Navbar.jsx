@@ -42,81 +42,57 @@ const Navbar = () => {
                     src={ millimag }
                     alt="user image"
                     className="cursor-pointer rounded-full"
-                    width={65}
-                    height={65}
+                    width={85}
+                    height={85}
                   />
                   </div>
                   <div className="hidden md:block">
                     <div className="ml-10 flex items-baseline space-x-4">
                     <Link href="/">
                       <p
-                        className=" hover:bg-orange-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-black hover:shadow-md hover:shadow-orange-300 cursor-pointer mr-5 hover:border-2 hover:md:shadow-xl shadow-gray-500 hover:border-orange-500 rounded-lg py-1 px-2 hover:text-gray-900"
                       >
-                        🏠 Home.
+                         Home.
                       </p>
                     </Link>
                     <Link href="/About">
                       <p
-                        className=" hover:bg-orange-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-black hover:shadow-md hover:shadow-orange-300 cursor-pointer mr-5 hover:border-2 hover:md:shadow-xl shadow-gray-500 hover:border-orange-500 rounded-lg py-1 px-2 hover:text-gray-900"
                       >
-                        ( ͡❛ ͜ʖ ͡❛) About Us.
+                        About Us.
                       </p>
                     </Link>
                     <Link href="/Reservations">
                       <p
-                        className="text-black hover:bg-orange-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-black hover:shadow-md hover:shadow-orange-300 cursor-pointer mr-5 hover:border-2 hover:md:shadow-xl shadow-gray-500 hover:border-orange-500 rounded-lg py-1 px-2 hover:text-gray-900"
                       >
-                        📖 Reservations.
+                         Reservations.
                       </p>
                     </Link>
                     <Link href="/Contact">
                       <p
-                        className="text-black hover:bg-orange-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-black hover:shadow-md hover:shadow-orange-300 cursor-pointer mr-5 hover:border-2 hover:md:shadow-xl shadow-gray-500 hover:border-orange-500 rounded-lg py-1 px-2 hover:text-gray-900"
                       >
-                        ☏ Contacts.
+                         Contacts.
                       </p>
                     </Link>
                     <Link href="/Gallery">
                       <p
-                        className="text-black hover:bg-orange-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-black hover:shadow-md hover:shadow-orange-300 cursor-pointer mr-5 hover:border-2 hover:md:shadow-xl shadow-gray-500 hover:border-orange-500 rounded-lg py-1 px-2 hover:text-gray-900"
                       >
-                       🖼️ Gallery.
+                         Gallery.
                       </p>
                     </Link>
 
                      <Link href="/Events">
                       <p
-                        className="text-black hover:bg-orange-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-black hover:shadow-md hover:shadow-orange-300 cursor-pointer mr-5 hover:border-2 hover:md:shadow-xl shadow-gray-500 hover:border-orange-500 rounded-lg py-1 px-2 hover:text-gray-900"
                       >
-                       📝 Events.
+                         Events.
                       </p>
-                    </Link>                     
+                    </Link>
 
-                      <div className="flex items-center">
-                      <div className="flex space-x-1">
-                       <input
-                          type="text"
-                          className="block w-full px-4 py-2 text-purple-700 bg-white border rounded-full focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
-                          placeholder="Search..."
-                        />
-                        <button className="px-4 text-white bg-orange-500 rounded-full ">
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-5 h-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                        >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                        />
-                    </svg>
-                </button>
-            </div>
-        </div>
+                    <button className="md:mt-0 mt-2 md:mr-0 mr-2 bg-black px-8 py-3 rounded-full text-sm text-white hover:text-gray-200  shadow-xl hover:shadow-2xl hover:shadow-orange-500/80 shadow-orange-400/40 hover:bg-orange-500">Contact Us</button>                     
     
                   <button className="cursor-pointer pl-9 pt-2" onClick={() => setShowCart(true)}>
                     <ShoppingBagIcon className="cart-icon" />
@@ -128,29 +104,7 @@ const Navbar = () => {
                 </div>
                 <div className="-mr-2 flex md:hidden">
                 <div className="flex items-center">
-                      <div className="flex mr-5 space-x-1">
-                       <input
-                          type="text"
-                          className="block w-full px-4 py-2 text-orange-700 bg-white border rounded-full focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
-                          placeholder="Search..."
-                        />
-                        <button className="px-4 text-white bg-orange-600 rounded-full ">
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-5 h-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                        >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                        />
-                    </svg>
-                </button>
-            </div>
+             
         </div>
                   <button className="cursor-pointer mr-5" onClick={() => setShowCart(true)}>
                     <ShoppingBagIcon className="cart-icon" />
@@ -214,57 +168,51 @@ const Navbar = () => {
             >
               {(ref) => (
                 <div className="md:hidden" id="mobile-menu">
-                  <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                  <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3 hover:shadow-md shadow-gray-400 text-gray-600 body-font">
                     <Link href="/">
                     <p
-                      className="hover:bg-orange-600 text-black block px-3 py-2 rounded-md text-base font-medium"
+                      className="text-black hover:shadow-md hover:shadow-orange-300 cursor-pointer mr-5 hover:border-2 hover:md:shadow-xl shadow-gray-500 hover:border-orange-500 rounded-lg py-1 px-2 hover:text-gray-900"
                     >
-                      🏠 Home.
+                       Home.
                     </p>
                     </Link>
                     <Link href="/Contact">
                     <p
-                      className="text-black hover:bg-orange-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                      className="text-black hover:shadow-md hover:shadow-orange-300 cursor-pointer mr-5 hover:border-2 hover:md:shadow-xl shadow-gray-500 hover:border-orange-500 rounded-lg py-1 px-2 hover:text-gray-900"
                     >
-                      ☏ Contacts.
+                        Contacts.
                     </p>
                     </Link>
                     <Link href="/About">
                     <p
-                      className="text-black hover:bg-orange-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                      className="text-black hover:shadow-md hover:shadow-orange-300 cursor-pointer mr-5 hover:border-2 hover:md:shadow-xl shadow-gray-500 hover:border-orange-500 rounded-lg py-1 px-2 hover:text-gray-900"
                     >
-                      ( ͡❛ ͜ʖ ͡❛) About Us.
+                        About Us.
                     </p>
                     </Link>
                     <Link href="/Reservations">
                     <p
-                      className="text-black hover:bg-orange-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                      className="text-black hover:shadow-md hover:shadow-orange-300 cursor-pointer mr-5 hover:border-2 hover:md:shadow-xl shadow-gray-500 hover:border-orange-500 rounded-lg py-1 px-2 hover:text-gray-900"
                     >
-                      📖 Reservations.
+                       Reservations.
                     </p>
                     </Link>
                     <Link href="/Gallery">
                     <p 
-                      className="text-black hover:bg-orange-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                      className="text-black hover:shadow-md hover:shadow-orange-300 cursor-pointer mr-5 hover:border-2 hover:md:shadow-xl shadow-gray-500 hover:border-orange-500 rounded-lg py-1 px-2 hover:text-gray-900"
                     >
-                      🖼️ Gallery.
+                       Gallery.
                     </p>
                     </Link>
                     <Link href="/Events">
                       <p
-                        className="text-black hover:bg-orange-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-black hover:shadow-md hover:shadow-orange-300 cursor-pointer mr-5 hover:border-2 hover:md:shadow-xl shadow-gray-500 hover:border-orange-500 rounded-lg py-1 px-2 hover:text-gray-900"
                       >
-                       📝 Events.
+                        Events.
                       </p>
                     </Link>
-                    <Link href="/Menu">
-                    <p
-                      className="text-black hover:bg-orange-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                    >
-                     ⋯ Menu.
-                    </p>
-                    </Link>
                   </div>
+                  <button className="md:mt-0 mt-2 md:mr-0 mr-2 bg-black px-8 py-3 rounded-full text-sm text-white hover:text-gray-200  shadow-xl hover:shadow-2xl hover:shadow-orange-500/80 shadow-orange-400/40 hover:bg-orange-500">Contact Us</button> 
                 </div>
               )}
             </Transition>
