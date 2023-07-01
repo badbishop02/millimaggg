@@ -11,5 +11,6 @@ import events from './events';
 import gallery from './gallery';
 import reviews from './reviews';
 import socialmedia from './socialmedia';
+import discounts from './discounts';
 
-export const schemaTypes = [socialmedia, reviews, contact, gallery, about, events, checkout, food, category, banner, blockContent, booking, user]
+export const schemaTypes = [socialmedia, reviews, contact, gallery, about, events, checkout, food, category, banner, blockContent, booking, discounts, user]
