@@ -12,16 +12,16 @@ export default {
             },
         },
         {
-            name: 'imag2',
-            title: 'Image2',
+            name: 'imagee',
+            title: 'Imagee',
             type: 'image',
             options: {
                 hotspot: true,
             },
         },
         {
-            name: 'image3',
-            title: 'Image3',
+            name: 'imagees',
+            title: 'Imagees',
             type: 'image',
             options: {
                 hotspot: true,
