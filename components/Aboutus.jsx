@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { urlFor } from '../utils/client';
 
 const Aboutus = ({ aboutInfo }) => {
+  console.log( aboutInfo );
   return (
  <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]">
   <div className="container mx-auto">
@@ -16,24 +17,28 @@ const Aboutus = ({ aboutInfo }) => {
                 src={urlFor(aboutInfo?.image)}
                 alt="aboutimage"
                 className="w-full rounded-2xl" 
-                width={85}
+                width={125}
                 height={125}
               />
             </div>
             <div className="py-3 sm:py-4">
-              <img
-                src="https://cdn.tailgrids.com/2.0/image/marketing/images/about/about-01/image-2.jpg"
-                alt=""
-                className="w-full rounded-2xl"
+            <img
+                src={urlFor(aboutInfo?.imagee)}
+                alt="aboutimage"
+                className="w-full rounded-2xl" 
+                width={125}
+                height={125}
               />
             </div>
           </div>
           <div className="w-full px-3 sm:px-4 xl:w-1/2">
             <div className="relative z-10 my-4">
-              <img
-                src="https://cdn.tailgrids.com/2.0/image/marketing/images/about/about-01/image-3.jpg"
-                alt=""
-                className="w-full rounded-2xl"
+            <img
+                src={urlFor(aboutInfo?.imagees)}
+                alt="aboutimage"
+                className="w-full rounded-2xl" 
+                width={125}
+                height={125}
               />
               <span className="absolute -right-7 -bottom-7 z-[-1]">
                 <svg
@@ -625,9 +630,9 @@ const Aboutus = ({ aboutInfo }) => {
           </p>
           <Link href="/">
           <button 
-        className="mt-8 px-12 py-3 bg-gradient-to-r from-orange-500 to-red-900 hover:from-amber-600 hover:to-red-700 text-xl text-white/70 font-semibold drop-shadow-lg rounded-full"
+        className="mt-8 px-12 py-3 bg-gradient-to-r from-pink-500 to-red-600 hover:from-pink-600 hover:to-red-700 text-xl text-white/70 font-semibold drop-shadow-lg rounded-full"
       >
-        Buy Now.
+        Shop instead.
       </button>
           </Link>
         </div>
