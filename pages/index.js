@@ -13,8 +13,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 
 import { client, urlFor } from "../utils/client";
 
-const HomePage = ({ foods, bannerData, socialsData }) => {
-  console.log(foods, bannerData, socialsData);
+const HomePage = ({ foods, bannerData, socialsData, discountsData }) => {
   // This is id for dynamic route, you
   // can change it to any value.
   const [isSSR, setIsSSR] = useState(true);
@@ -41,34 +40,33 @@ const HomePage = ({ foods, bannerData, socialsData }) => {
             <div className="rounded-t mb-0 px-6 py-6 bg-white">
              <div className="text-center flex justify-between">
               </div>
-              <div className="container mx-auto py-9 md:py-12 px-4 md:px-6">
+          
+           <div className="container mx-auto py-9 md:py-12 px-4 md:px-6">
             <div className="flex items-strech justify-center flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 lg:space-x-8">
+              {discountsData?.map((discounts) => (  
                 <div className="flex flex-col md:flex-row items-strech justify-between bg-gray-50 py-6 px-6 md:py-12 lg:px-12 md:w-8/12 lg:w-7/12 xl:w-8/12 2xl:w-9/12">
                     <div className="flex flex-col justify-center md:w-1/2">
-                        <h1 className="text-3xl lg:text-4xl font-semibold text-gray-800">Best Deal</h1>
+                        <h1 className="text-3xl lg:text-4xl font-semibold text-gray-800">{discounts?.title}</h1>
                         <p className="text-base lg:text-xl text-gray-800 mt-2">
-                            Save upto <span className="font-bold">50%</span>
+                            Save upto <span className="font-bold">{discounts?.percentage}</span>
                         </p>
                     </div>
                     <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center md:justify-end">
-                        <img src="https://i.ibb.co/J2BtZdg/Rectangle-56-1.png" alt="" />
+                        <img 
+                        src={urlFor(discounts?.image)}
+                        alt="aboutimage" 
+                        width={150}
+                        height={150}
+                        />
                     </div>
                 </div>
-                <div className="md:w-4/12 lg:w-5/12 xl:w-4/12 2xl:w-3/12 bg-gray-50 py-6 px-6 md:py-0 md:px-4 lg:px-6 flex flex-col justify-center relative">
-                    <div className="flex flex-col justify-center">
-                        <h1 className="text-3xl lg:text-4xl font-semibold text-gray-800">Game Console</h1>
-                        <p className="text-base lg:text-xl text-gray-800">
-                            Save Upto <span className="font-bold">30%</span>
-                        </p>
-                    </div>
-                    <div className="flex justify-end md:absolute md:bottom-4 md:right-4 lg:bottom-0 lg:right-0">
-                        <img src="https://i.ibb.co/rGfP7mp/Rectangle-59-1.png" alt="" className="md:w-20 md:h-20 lg:w-full lg:h-full" />
-                    </div>
-                </div>
+                ))};
             </div>
-            <h6 className="text-blueGray-700 text-xl mb-5 mt-5 font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-                The Menu
-               </h6>
+           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-black lg:my-8" />
+           <h1 className="font-Poppins font-bold text-3xl text-center text-orange-500 tracking-wider mb-4">
+             <u>Our food <span className="text-blue">Menu</span></u>
+           </h1>
+           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-black lg:my-8" />
         </div>
 
           <div>
@@ -98,8 +96,11 @@ export const getServerSideProps = async () => {
   const socialsQuery = '*[_type == "socialmedia"]';
   const socialsData = await client.fetch(socialsQuery);
 
+  const discountsQuery = '*[_type == "discounts"]';
+  const discountsData = await client.fetch(discountsQuery);
+
   return {
-    props: { foods, bannerData, socialsData }
+    props: { foods, bannerData, socialsData, discountsData }
   }
 }
 
