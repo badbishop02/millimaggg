@@ -7,6 +7,8 @@ import { UStateContext } from '../context/StateContext';
 import { urlFor } from '../utils/client';
 import mpesa from "../img/banner/contact.jpg";
 
+import Payment from "../components/Payment";
+
 const CheckoutForm = () => {
     const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = UStateContext();
 
@@ -48,8 +50,6 @@ const CheckoutForm = () => {
       setLocation('');
     };
   
-
-
   return (
 <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
   <form method="post" role="form">
@@ -153,6 +153,8 @@ const CheckoutForm = () => {
        onChange={(e) => setLastname(e.target.value)}
        />
      </div>
+     <br></br>
+      <Payment />
    </div>
  </div>
 </form>
